@@ -1,0 +1,111 @@
+* {
+    background-color: #f1f8ff;
+}
+
+a {
+    text-decoration: none;
+    transition: 1s;
+    color: #c94450;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+header {
+    padding: 3vh;
+    background-color: rgb(100, 237, 168);
+}
+
+ul {
+    margin-top: 7px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 10px
+}
+
+@media (max-width: 1300px) {
+    header {
+        max-width: 100%;
+        position: relative;
+    }
+    .app-main {
+        padding: 5px 7px;
+    }
+    ul {
+        display: none;
+    }
+    .icon-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .icon-menu img {
+        position: absolute;
+        width: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .trang-chu {
+        width: 100px;
+    }
+}
+
+h1 {
+    padding-top: 100px;
+    text-align: center;
+    color: #0f172b;
+}
+
+input {
+    border-radius: 5px;
+    background-color: white;
+    width: 555px;
+    height: 50px;
+    border: none;
+    padding: 1px 7px;
+    margin-top: 5px;
+}
+
+h6 {
+    width: 150px;
+    margin-left: 32.7%;
+}
+
+form {
+    margin-top: 15px;
+    text-align: center;
+}
+
+button {
+    background-color: #fea116;
+    border-radius: 5px;
+    border: none;
+    transition: 1s;
+    color: white;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+p {
+    color: red;
+    font-style: italic;
+    margin-left: -300px;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}

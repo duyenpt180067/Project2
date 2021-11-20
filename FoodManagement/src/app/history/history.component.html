@@ -1,0 +1,23 @@
+<table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="example2_info">
+    <thead>
+        <tr role="row">
+            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Food Name
+            </th>
+            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Food Size
+            </th>
+            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Quantity</th>
+            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Price</th>
+            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr role="row" class="odd" *ngFor="let item of listOrderDetail">
+            <td>{{item.foodDetail?.food?.foodName}}</td>
+            <td>{{item.foodDetail?.size?.sizeName}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.order.orderStatus}}</td>
+        </tr>
+
+    </tbody>
+</table>

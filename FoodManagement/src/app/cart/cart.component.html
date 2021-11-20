@@ -1,0 +1,224 @@
+<div class="head">
+    <div class="container">
+        <div class="row">
+            <div class="menu-cart col-7">
+                <div class="row">
+                    <div class="col-2 logo">
+                        <a routerLink="../home" title=""><img src="../../assets/images/logo.PNG" alt=""></a>
+                    </div>
+                    <div class="col-10 menu-all">
+                        <nav>
+                            <ul class="menu">
+                                <li><a routerLink="../home">Home</a></li>
+                                <!-- <li><a routerLink="../menu">Menu</a></li> -->
+                                <li><a routerLink="../about">About</a></li>
+                                <li><a routerLink="../shop">Shop</a></li>
+                                <li><a routerLink="../blog">Blog</a></li>
+                                <li><a routerLink="../faq">Faqs</a></li>
+                                <!-- <li><a style="cursor: pointer;">Page</a>
+                                    <ul class="sub-page">
+                                        <li><a routerLink="../faq" title="">faqs</a></li>
+                                        <li><a routerLink="../team" title="">our team</a></li>
+                                    </ul>
+                                </li> -->
+                                <li><a routerLink="../contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="ship-call col-5">
+                <div class="row">
+                    <div class="img-ship col-2">
+                        <img src="../../assets/images/ship.PNG" alt="">
+                    </div>
+                    <div class="call col-6">
+                        <p>Call and Order in</p>
+                        <p class="phone-number"> +1 718-904-4450</p>
+                    </div>
+                    <div class="contact-login col-4">
+                        <ul>
+                            <li><a routerLink="../user"><i class="fas fa-user"></i></a></li>
+                            <li><a routerLink="../cart"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li><a routerLink="../orderall" title="your orders"><i class="fas fa-address-book"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-menu">
+        <div class="img-banner" style="opacity: 0.2;filter:brightness(80%);">
+            <img src="../../assets/images/bannermenu1.jpg" alt="">
+        </div>
+        <div class="titlemenu container">
+            <h1>Cart</h1>
+            <div class="tohome container">
+                <div class="row">
+                    <div class="linkhome col-6">
+                        <a routerLink="../home" title="">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-menu col-6">
+                        <p>Your Cart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6 onedeal" *ngFor="let item of listBuy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 ">
+                        <span class="onsale" *ngIf="discount(item)">Sale!</span>
+                        <div class="imgdeal">
+                            <a routerLink="../food/{{item.foodSend?.food?.foodId}}"><img src={{item.foodSend?.food?.imageURL}} alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-7 contentdeal">
+                        <div class="namedeal">
+                            <a routerLink="../food/{{item.foodSend?.food?.foodId}}">{{item.foodSend?.food?.foodName}}</a>
+                        </div>
+                        <div class="costdeal row">
+                            <div class="col-3" style="padding: 0;margin-right: -15px;">
+                                <p style="margin-bottom: auto;">Catalog: </p>
+                                <a routerLink="../shop/{{item.foodSend?.food?.catalog?.caId}}">{{item.foodSend?.food?.catalog?.caName}}</a>
+                            </div>
+                            <div class="col-4" style="text-align: center;padding: 0; margin-right: 25px;">
+                                <p>Size: {{item.sizeFood}}</p>
+                            </div>
+                            <div class="col-4" style="padding: 0;">
+                                <p><span *ngIf="discount(item)">£{{item.foodSend?.price}}</span> £{{item.foodSend?.price*(100-item.foodSend?.food?.discount)/100}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="quantities buttons row">
+                            <div class="col-5">
+                                <button type="button" class="minus" (click)="Minus(item)">-</button>
+                                <input type="number" min="1" class="qty" name="quantity" ngModel="{{item.amount}}">
+                                <button type="button" class="plus" (click)="Plus(item)">+</button>
+                            </div>
+                            <div class="subtotal col-7">
+                                <div class="row">
+                                    <div class="col-6" style="padding: 0; padding-left: 14px;">
+                                        <p>Sub Total: £</p>
+                                    </div>
+                                    <div class="col-4" style="padding: 0;">
+                                        <input value="{{item.foodSend?.price*item.amount*(100 - item.foodSend?.food?.discount)/100}}" readonly="true" type="text" name="" id="sub">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 buttons">
+                        <button type="button" class="remove" (click)="remove(item)">x</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-6 onedeal" *ngFor="let item of listDeal">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 ">
+                        <div class="imgdeal">
+                            <a routerLink="../deal/{{item.foodSend?.bonusId}}"><img src={{item.foodSend?.bonusImage}} alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-7 contentdeal">
+                        <div class="namedeal">
+                            <a routerLink="../deal/{{item.foodSend?.bonusId}}">{{item.foodSend?.bonusName}}</a>
+                        </div>
+                        <div class="costdeal row">
+                            <div>
+                                <p>Deal</p>
+                            </div>
+                            <div class="col-5" style="text-align: end;">
+                                <p>Size: {{item.sizeFood}}</p>
+                            </div>
+                            <div class="col-5">
+                                <p>£{{item.price}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="quantities buttons row">
+                            <div class="col-5">
+                                <button type="button" class="minus" (click)="Minus(item)">-</button>
+                                <input type="number" min="1" class="qty" name="quantity" ngModel="{{item.amount}}">
+                                <button type="button" class="plus" (click)="Plus(item)">+</button>
+                            </div>
+                            <div class="subtotal col-7">
+                                <div class="row">
+                                    <div class="col-6" style="padding: 0; padding-left: 14px;">
+                                        <p>Sub Total: £</p>
+                                    </div>
+                                    <div class="col-4" style="padding: 0;">
+                                        <input ngModel="{{item.price}}" readonly="true" type="text" name="" id="sub">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 buttons">
+                        <button type="button" class="remove" (click)="remove(item)">x</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="container total">
+        <p>Total: <span>£{{total}}</span></p>
+    </div>
+    <div class=" container">
+        <div class="row">
+            <div class="address col-4">
+                <p>Receiver</p>
+                <input type="text" id="name" name="" placeholder="Name" id="" [(ngModel)]="name">
+            </div>
+            <div class="address col-4">
+                <p>Receiver's number</p>
+                <input type="tel" id="phone" name="" placeholder="Phone number" id="" [(ngModel)]="phone">
+            </div>
+            <div class="address col-4">
+                <p>Receiving address</p>
+                <input type="text" id="address" name="" placeholder="Address" id="" [(ngModel)]="addresses">
+            </div>
+        </div>
+        <a routerLink="../cart"><button class="order" (click)="order()">Order</button></a>
+        <!-- <button type="" id="del">Delete</button> -->
+    </div>
+</div>
+<div class="food-relate" style="margin-left: 205px;">
+    <h2 style="margin-bottom: 30px;">May be you care: </h2>
+    <div class="row">
+        <div class="col-4 onefood" style="margin-bottom: 50px;" *ngFor="let item of listFoodRelated">
+            <div class="foodmain">
+                <div class="imgfood">
+                    <span class="onsale">Sale</span>
+                    <a routerLink="../food/{{item.food.foodId}}"><img src={{item.food.imageURL}} alt=""></a>
+                </div>
+                <div class="namefood">
+                    <a routerLink="../food/{{item.food.foodId}}">
+                        <p>{{item.food.foodName}}</p>
+                    </a>
+                </div>
+                <div class="description">
+                    <p>{{item.food.catalog.descriptions}}</p>
+                </div>
+                <div class="row cost-cart">
+                    <div class="col-4" style="padding: 0;">
+                        <p><span>£{{item.price}}</span> £{{item.price *(100 - item.food.discount)/100}}</p>
+                    </div>
+                    <div class="col-6" style="padding: 0;">
+                        <p><span style="color: gray; text-decoration-line:none; padding-left: 2px; font-weight: normal;">Size:</span> {{item.size.sizeName}}</p>
+                    </div>
+                    <div class="col-2">
+                        <a routerLink="../cart" (click)="addCart(item)"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,183 @@
+<div class="head">
+    <div class="container">
+        <div class="row">
+            <div class="menu-cart col-7">
+                <div class="row">
+                    <div class="col-2 logo">
+                        <a href="" title=""><img src="../../assets/images/logo.PNG" alt=""></a>
+                    </div>
+                    <div class="col-10 menu-all">
+                        <nav>
+                            <ul class="menu">
+                                <li><a routerLink="../home">Home</a></li>
+                                <!-- <li><a routerLink="../menu">Menu</a></li> -->
+                                <li><a routerLink="../about">About</a></li>
+                                <li><a routerLink="../shop" style="color: #ffc222;">Shop</a></li>
+                                <li><a routerLink="../blog">Blog</a></li>
+                                <li><a routerLink="../faq">Faqs</a></li>
+                                <!-- <li><a style="cursor: pointer;">Page</a>
+                                    <ul class="sub-page">
+                                        <li><a routerLink="../faq" title="">faqs</a></li>
+                                        <li><a routerLink="../team" title="">our team</a></li>
+                                    </ul>
+                                </li> -->
+                                <li><a routerLink="../contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="ship-call col-5">
+                <div class="row">
+                    <div class="img-ship col-2">
+                        <img src="../../assets/images/ship.PNG" alt="">
+                    </div>
+                    <div class="call col-6">
+                        <p>Call and Order in</p>
+                        <p class="phone-number"> +1 718-904-4450</p>
+                    </div>
+                    <div class="contact-login col-4">
+                        <ul>
+                            <li><a routerLink="../user"><i class="fas fa-user"></i></a></li>
+                            <li><a routerLink="../cart"><i class="fas fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-menu">
+        <div class="img-banner" style="opacity: 0.2;filter:brightness(80%);">
+            <img src="../../assets/images/bannermenu1.jpg" alt="">
+        </div>
+        <div class="titlemenu container">
+            <h1>Shop</h1>
+            <div class="tohome container">
+                <div class="row">
+                    <div class="linkhome col-6">
+                        <a href="../home" title="">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-menu col-6">
+                        <p>Shop</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="allfood">
+    <div class="food row">
+        <div class="col-9 allcontent">
+            <div class="row title">
+                <div class="result col-6">
+                    <p>Total {{listFood?.length}} results / {{listAll?.length}} results</p>
+                </div>
+                <div class="sorting col-6">
+                    <div class="sort">
+                        <select class="select-sort" [(ngModel)]="selected" id="sort" (change)="sorted()">
+                            <option value="default">Defaul sorted</option>
+                            <option value="late">Sort by latest</option>
+                            <option value="high">Sort by price: low to high</option>
+                            <option value="low">Sort by price: high to low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="allfoodcontent row">
+                <div class="col-4 onefood" *ngFor="let food of listFood">
+                    <div class="foodmain">
+                        <span class="onsale" *ngIf="discount(food)">Sale</span>
+                        <div class="imgfood">
+                            <a routerLink="../food/{{food.food.foodId}}" title=""><img src={{food.food.imageURL}} alt=""></a>
+                        </div>
+                        <div class="namefood">
+                            <a routerLink="../food/{{food.food.foodId}}" title="">
+                                <p>{{food.food.foodName}}</p>
+                            </a>
+                        </div>
+                        <div class="description">
+                            <p>{{food.food.catalog.descriptions}}</p>
+                        </div>
+                        <div class="row cost-cart">
+                            <div class="col-6" style="text-align: start; padding: 0;">
+                                <p>Size: {{food.size.sizeName}}</p>
+                            </div>
+                            <div class="col-4" style="text-align: start; padding: 0;">
+                                <p><span *ngIf="discount(food)">£{{food.price}}</span> £{{food.price *(100 - food.food.discount)/100}}</p>
+                            </div>
+                            <div class="col-2">
+                                <a routerLink="../cart" (click)="addCart(food)"><i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row page">
+                    <ul>
+                        <li class="pages" (click)="page(1)"><button id="1">1</button></li>
+                        <li class="pages" *ngFor="let i of listPage" (click)="page(i)"><button id="{{i}}">{{i}}</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 onefood">
+            <div class="foodmain">
+                <div class="category">
+                    <p>Categories</p>
+                </div>
+                <div class="catalog container">
+                    <a routerLink="{{item.category.caId}}" *ngFor="let item of listCatalog">
+                        <div (click)="Category(item.category.caId)" class="one-catalog row" id="{{item.category.caId}}">
+                            <div class="col-10 foods">
+                                <div class="row">
+                                    <div class="col-3" style="padding-right: 0;">
+                                        <!-- <i class="fas fa-utensils"></i> -->
+                                        <img src={{item.category.imageUrl}} style="width: 100%;" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <p>{{item.category.caName}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <p>({{item.size}})</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="search">
+                <input type="search" id="" [(ngModel)]="searchFood" class="search-field col-10" placeholder="Search products…">
+                <button class="col-2 searchbtn" (click)="search()" type="submit" value="Search"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="deal">
+                <p>Best Deal</p>
+            </div>
+            <div class="onedeal container" *ngFor="let item of listDeal">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="imgdeal">
+                            <a routerLink="../food/{{item.foodDetail.food.foodId}}"><img src={{item.bonusImage}} alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-7 contentdeal">
+                        <div class="namedeal">
+                            <a class="namedeal" routerLink="../food/{{item.foodDetail.food.foodId}}">{{item.bonusName}}</a>
+                        </div>
+                        <div class="row">
+                            <div class="costdeal col-6">
+                                <p>£{{item.bonusPrice}}</p>
+                            </div>
+                            <div class="col-4 dealcart">
+                                <a routerLink="../cart" (click)="addCart(item)"><i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

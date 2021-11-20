@@ -1,0 +1,318 @@
+ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.menu-all li {
+    position: relative;
+}
+
+.menu-all li:hover>.sub-page {
+    visibility: visible;
+}
+
+.sub-page {
+    position: absolute;
+    padding: 5px 0px;
+    top: 100%;
+    left: 0px;
+    z-index: 1;
+    width: 160px;
+    background: white;
+    visibility: hidden;
+}
+
+.sub-page li {
+    font-size: 16px;
+}
+
+.sub-page li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.call {
+    margin-top: -8px;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffc222;
+    margin-top: -15px;
+}
+
+.menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    font-weight: 800;
+}
+
+.linkhome i {
+    margin-left: 6px;
+}
+
+.menu-menu i {
+    margin-left: 6px;
+}
+
+.img-banner {
+    opacity: 0.1;
+    filter: brightness(140%);
+    height: 70px;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.titlemenu {
+    margin-left: 190px;
+}
+
+.titlemenu h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin-left: -50px;
+}
+
+.bannerfood {
+    margin: 0 20px;
+}
+
+.tohome {
+    position: absolute;
+    margin-left: -160px;
+    margin-top: -50px;
+}
+
+.linkhome {
+    text-align: end;
+}
+
+.tohome a {
+    color: burlywood;
+}
+
+.tohome a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.menu-menu {
+    text-align: start;
+    padding: 0;
+}
+
+.name-food {
+    margin-left: -100px;
+}
+
+.img-sp {
+    background-color: #f7f4ef;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.reason {
+    color: gray;
+}
+
+.img-sp img {
+    width: 100%;
+}
+
+.name-sp {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 36px;
+    margin-left: 45px;
+}
+
+.price-sp {
+    font-size: 30px;
+    margin-bottom: .6em;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffc222;
+}
+
+.qty {
+    padding: .5em;
+    border-radius: 0;
+    text-align: center;
+    font-size: 16px;
+    width: 35px;
+    color: #1E1D23;
+    border: none;
+    -moz-appearance: textfield;
+    font-weight: 700;
+}
+
+.qty::-webkit-outer-spin-button,
+.qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.buttons button {
+    color: #000;
+    background-color: #f7f4ef;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    padding: 0;
+    text-align: center;
+    z-index: 9;
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.buttons button:focus {
+    outline: none;
+}
+
+select {
+    width: inherit;
+    height: 40px;
+    border-radius: 5px;
+    border: #efefef;
+    background-color: #f7f4ef;
+    padding-left: 10px;
+}
+
+.add {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: -4px;
+    font-weight: 700;
+    border-radius: 8px 8px 8px 8px;
+    padding: 14px 0;
+    background-color: #ffc222;
+    border: none;
+    width: inherit;
+}
+
+.add:hover {
+    color: #fff;
+}
+
+.add:focus {
+    color: #fff;
+    background-color: #eeac00;
+}
+
+.product_meta {
+    margin-top: 17px;
+    padding-top: 35px;
+    border-top: 1px solid;
+    border-top-color: #efefef;
+    color: gray;
+}
+
+.category {
+    font-weight: 700;
+    color: gray;
+}
+
+.share {
+    color: gray;
+    margin-left: auto;
+}
+
+.link {
+    margin: 0 10px;
+    color: gray;
+}
+
+.product-info {
+    padding: 30px 20px 100px;
+    border-top: 1px solid;
+    border-top-color: #efefef;
+    border-bottom: 1px solid;
+    border-bottom-color: #efefef;
+    color: gray;
+}
+
+.product-info ul {
+    list-style-type: inherit;
+}
+
+.brand-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.title-brand {
+    margin-right: auto;
+    font-size: 17px;
+    color: gray;
+    font-weight: 700;
+}
+
+.title-des {
+    margin: 90px 0 60px;
+}
+
+.des {
+    text-align: end;
+}
+
+.title-des button {
+    border-radius: 6px;
+    height: 50px;
+    width: 170px;
+    background-color: #ffc222;
+    color: #0f172b;
+    font-weight: 700;
+    transition: 200ms;
+    border: none;
+    font-size: 25px;
+}
+
+.title-des button:hover {
+    color: white;
+}
+
+.title-des button:focus {
+    outline: none;
+}
+
+.des-content {
+    color: gray;
+    font-size: 17px;
+    padding: 75px 60px;
+}

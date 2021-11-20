@@ -1,0 +1,648 @@
+ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.menu-all li {
+    position: relative;
+}
+
+.menu-all li:hover>.sub-page {
+    visibility: visible;
+}
+
+.sub-page {
+    position: absolute;
+    padding: 5px 0px;
+    top: 100%;
+    left: 0px;
+    z-index: 1;
+    width: 160px;
+    background: white;
+    visibility: hidden;
+}
+
+.sub-page li {
+    font-size: 16px;
+}
+
+.sub-page li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.call {
+    margin-top: -8px;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffc222;
+    margin-top: -15px;
+}
+
+.menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    font-weight: 800;
+}
+
+.linkhome i {
+    margin-left: 6px;
+}
+
+.menu-menu i {
+    margin-left: 6px;
+}
+
+.img-banner {
+    opacity: 0.1;
+    filter: brightness(140%);
+    height: 70px;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.titlemenu {
+    margin-left: 190px;
+}
+
+.titlemenu h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin-left: -50px;
+}
+
+.bannerfood {
+    margin: 0 20px;
+}
+
+.tohome {
+    position: absolute;
+    margin-left: -160px;
+    margin-top: -50px;
+}
+
+.linkhome {
+    text-align: end;
+}
+
+.tohome a {
+    color: burlywood;
+}
+
+.tohome a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.menu-menu {
+    text-align: start;
+    padding: 0;
+}
+
+.name-food {
+    margin-left: -100px;
+}
+
+.img-sp {
+    background-color: #f7f4ef;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.reason {
+    color: gray;
+}
+
+.img-sp img {
+    width: 100%;
+}
+
+.name-sp {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 36px;
+    margin-left: 45px;
+}
+
+.price-sp {
+    font-size: 30px;
+    margin-bottom: .6em;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffc222;
+}
+
+.qty {
+    padding: .5em;
+    border-radius: 0;
+    text-align: center;
+    font-size: 16px;
+    width: 35px;
+    color: #1E1D23;
+    border: none;
+    -moz-appearance: textfield;
+    font-weight: 700;
+}
+
+.qty::-webkit-outer-spin-button,
+.qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.buttons button {
+    color: #000;
+    background-color: #f7f4ef;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    padding: 0;
+    text-align: center;
+    z-index: 9;
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.buttons button:focus {
+    outline: none;
+}
+
+select {
+    width: inherit;
+    height: 40px;
+    border-radius: 5px;
+    border: #efefef;
+    background-color: #f7f4ef;
+    padding-left: 10px;
+}
+
+.add {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: -4px;
+    font-weight: 700;
+    border-radius: 8px 8px 8px 8px;
+    padding: 14px 0;
+    background-color: #ffc222;
+    border: none;
+    width: inherit;
+}
+
+.add:hover {
+    color: #fff;
+}
+
+.add:focus {
+    color: #fff;
+    background-color: #eeac00;
+}
+
+.like {
+    display: inline-block;
+    white-space: nowrap;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    position: relative;
+    margin-top: -4px;
+    background-color: #f7f4ef;
+    border-radius: 8px;
+    color: #808080;
+    padding: 0;
+    border: none;
+}
+
+.like.active {
+    color: red !important;
+}
+
+.onsale {
+    color: #fff;
+    padding: 2px 12px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 39px;
+    background: #1e1d23;
+    z-index: 3;
+    border-radius: 20px;
+}
+
+.price-sp p span {
+    text-decoration-line: line-through;
+    color: gray;
+}
+
+.like:focus {
+    outline: none;
+}
+
+.addcart {
+    border-top: 1px solid #efefef;
+    padding-top: 20px;
+}
+
+.product_meta {
+    margin-top: 17px;
+    padding-top: 35px;
+    border-top: 1px solid;
+    border-top-color: #efefef;
+    color: gray;
+}
+
+.category {
+    font-weight: 700;
+    color: gray;
+}
+
+.share {
+    color: gray;
+    margin-left: auto;
+}
+
+.link {
+    margin: 0 10px;
+    color: gray;
+}
+
+.product-info {
+    padding: 30px 20px 100px;
+    border-top: 1px solid;
+    border-top-color: #efefef;
+    border-bottom: 1px solid;
+    border-bottom-color: #efefef;
+    color: gray;
+}
+
+.product-info ul {
+    list-style-type: inherit;
+}
+
+.brand-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.title-brand {
+    margin-right: auto;
+    font-size: 17px;
+    color: gray;
+    font-weight: 700;
+}
+
+.title-des {
+    margin: 90px 0 60px;
+}
+
+.des {
+    text-align: end;
+}
+
+.title-des button {
+    border-radius: 6px;
+    height: 50px;
+    width: 170px;
+    background-color: #ffc222;
+    color: #0f172b;
+    font-weight: 700;
+    transition: 200ms;
+    border: none;
+    font-size: 25px;
+}
+
+.title-des button:hover {
+    color: white;
+}
+
+.title-des button:focus {
+    outline: none;
+}
+
+.des-content {
+    color: gray;
+    font-size: 17px;
+    padding: 0 60px;
+}
+
+.size {
+    padding: 50px 100px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.all-size {
+    border-right: 1px solid #efefef;
+    padding: 0;
+}
+
+.name-size {
+    border-bottom: 1px solid #efefef;
+}
+
+.content-size {
+    padding: 0;
+}
+
+.pos {
+    padding: 7px 0 0 25px;
+}
+
+.relate {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 750;
+    margin-top: 30px;
+}
+
+.food-relate {
+    margin: 70px 110px;
+}
+
+.foodmain {
+    border: 1px solid #f3f3f3;
+    padding: 20px 25px 0 25px;
+    border-radius: 20px;
+}
+
+.imgfood {
+    text-align: center;
+    margin: -8px -42px;
+}
+
+.imgfood img {
+    width: 80%;
+    border-radius: 15px;
+    text-align: left;
+    transition: 300ms;
+    background-color: #fbf7e8;
+}
+
+.imgfood:hover img {
+    transform: scale(1.1);
+    background-color: #ffc222;
+}
+
+.imgfood:hover img {
+    transform: scale(1.1);
+}
+
+.namefood p {
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 16px;
+}
+
+.description p {
+    color: gray;
+}
+
+.cost-cart p {
+    font-size: 18px;
+    color: #ffc222;
+    font-weight: 800;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.symbol {
+    text-align: end;
+}
+
+.symbol img {
+    border-radius: 50%;
+}
+
+.user {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.clock {
+    margin-top: -6px;
+    padding: 0;
+    color: #ccc;
+}
+
+.date {
+    margin-top: -7px;
+    padding: 0;
+    margin-left: -25px;
+}
+
+.commentform input {
+    width: 100%;
+    height: 43px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    padding: 0 10px;
+}
+
+.commentform textarea {
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    padding: 5px 10px;
+}
+
+.commentform button {
+    border-radius: 6px;
+    height: 50px;
+    width: 170px;
+    background-color: #ffc222;
+    color: #0f172b;
+    font-weight: 700;
+    transition: 200ms;
+    border: none;
+    font-size: 19px;
+    margin: 25px 0;
+}
+
+.commentform button:focus {
+    outline: none;
+}
+
+.commentform button:hover {
+    color: white;
+}
+
+.change {
+    width: 190px;
+    position: absolute;
+    height: 50px;
+    margin-left: -47px;
+    margin-top: -15px;
+}
+
+fieldset,
+label {
+    margin: 0;
+    padding: 0;
+    margin-top: -7px;
+}
+
+.stars-container {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+}
+
+.stars-container:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    color: lightgray;
+}
+
+.stars-container:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    color: gold;
+    overflow: hidden;
+}
+
+.stars-0:after {
+    width: 0%;
+}
+
+.stars-10:after {
+    width: 10%;
+}
+
+.stars-20:after {
+    width: 20%;
+}
+
+.stars-30:after {
+    width: 30%;
+}
+
+.stars-40:after {
+    width: 40%;
+}
+
+.stars-50:after {
+    width: 50%;
+}
+
+.stars-60:after {
+    width: 60%;
+}
+
+.stars-70:after {
+    width: 70%;
+}
+
+.stars-80:after {
+    width: 80%;
+}
+
+.stars-90:after {
+    width: 90%;
+}
+
+.stars-100:after {
+    width: 100;
+}
+
+.rate {
+    border: none;
+    float: left;
+}
+
+.rate>input {
+    display: none;
+}
+
+.rate>label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: none;
+    content: "\f005";
+}
+
+.rate>label {
+    color: #ddd;
+    float: right;
+}
+
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rate>input:checked~label,
+
+/* show gold star when clicked */
+
+.rate:not(:checked)>label:hover,
+
+/* hover current star */
+
+.rate:not(:checked)>label:hover~label {
+    color: #FFD700;
+}
+
+
+/* hover previous stars in list */
+
+.rate>input:checked+label:hover,
+
+/* hover current star when changing rating */
+
+.rate>input:checked~label:hover,
+.rate>label:hover~input:checked~label,
+
+/* lighten current selection */
+
+.rate>input:checked~label:hover~label {
+    color: #FFED85;
+}

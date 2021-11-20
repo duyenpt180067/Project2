@@ -1,0 +1,139 @@
+* {
+    background-color: #f1f8ff;
+}
+
+.app {
+    background-color: #f1f8ff;
+    padding: 100px 0;
+}
+
+.regis {
+    padding: 10px 0 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.trang-chu {
+    width: 100vh;
+}
+
+a {
+    text-decoration: none;
+    transition: 1s;
+    color: #c94450;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+header {
+    padding: 3vh;
+    background-color: rgb(100, 237, 168);
+}
+
+ul {
+    margin-top: 7px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 10px
+}
+
+@media (max-width: 1300px) {
+    header {
+        max-width: 100%;
+        position: relative;
+    }
+    .app-main {
+        padding: 5px 7px;
+    }
+    ul {
+        display: none;
+    }
+    .icon-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .icon-menu img {
+        position: absolute;
+        width: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .trang-chu {
+        width: 100px;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #0f172b;
+}
+
+h6 {
+    text-align: center;
+    font-size: 25px;
+    color: #ffc107;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+form {
+    margin-top: 15px;
+    text-align: center;
+}
+
+input {
+    border-radius: 5px;
+    background-color: white;
+    width: 350px;
+    height: 50px;
+    border: none;
+    padding: 1px 7px;
+    margin-top: 10px;
+}
+
+p {
+    color: red;
+    font-style: italic;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+#remember {
+    width: auto;
+    height: auto;
+    outline-style: dashed;
+    margin: 15px 5px;
+    color: aliceblue;
+}
+
+button {
+    background-color: #fea116;
+    border-radius: 5px;
+    border: none;
+    transition: 1s;
+    color: white;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+button:hover {
+    background-color: #0f172b
+}

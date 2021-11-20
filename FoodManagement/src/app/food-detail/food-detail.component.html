@@ -1,0 +1,285 @@
+<div class="head">
+    <div class="container">
+        <div class="row">
+            <div class="menu-cart col-7">
+                <div class="row">
+                    <div class="col-2 logo">
+                        <a routerLink="../../home" title=""><img src="../../assets/images/logo.PNG" alt=""></a>
+                    </div>
+                    <div class="col-10 menu-all">
+                        <nav>
+                            <ul class="menu">
+                                <li><a routerLink="../../home">Home</a></li>
+                                <!-- <li><a routerLink="../../menu">Menu</a></li> -->
+                                <li><a routerLink="../../about">About</a></li>
+                                <li><a routerLink="../../shop">Shop</a></li>
+                                <li><a routerLink="../../blog">Blog</a></li>
+                                <li><a routerLink="../../faq">Faqs</a></li>
+                                <li><a routerLink="../../contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="ship-call col-5">
+                <div class="row">
+                    <div class="img-ship col-2">
+                        <img src="../../assets/images/ship.PNG" alt="">
+                    </div>
+                    <div class="call col-6">
+                        <p>Call and Order in</p>
+                        <p class="phone-number"> +1 718-904-4450</p>
+                    </div>
+                    <div class="contact-login col-4">
+                        <ul>
+                            <li><a routerLink="../../user"><i class="fas fa-user"></i></a></li>
+                            <li><a routerLink="../../cart"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li><a routerLink="../../orderall" title="your orders"><i class="fas fa-address-book"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="banner-menu">
+    <div class="img-banner">
+        <img src="../../assets/images/bannermenu1.jpg" alt="">
+    </div>
+    <div class="titlemenu">
+        <div class="tohome container">
+            <div class="row bannerfood">
+                <div class="linkhome col-1">
+                    <a routerLink="../../home" title="">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="menu-menu col-2">
+                    <a routerLink="../../blog" title="">Our blog</a>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="name-food col-9">
+                    <p>{{sendItem?.foodSend?.foodName}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sp container">
+    <div class="row">
+        <div class="col-6">
+            <span class="onsale" *ngIf="discount(sendItem?.foodSend?.discount)">Sale!</span>
+            <div class="img-sp">
+                <img src={{sendItem?.foodSend?.imageURL}} alt="">
+            </div>
+            <div class="img-sp">
+                <img src={{foodDetailImage?.imageURL}} alt="">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="name-sp">
+                <p>{{sendItem?.foodSend?.foodName}}</p>
+            </div>
+            <div class="reason">
+                <p>{{sendItem?.foodSend?.catalog?.descriptions}}</p>
+            </div>
+            <div class="price-sp">
+                <p *ngIf="!checkSize"><span *ngIf="discount(sendItem?.foodSend?.discount)">£{{price1}} - {{price2}}</span> £{{price1Sale}} - {{price2Sale}}</p>
+                <p *ngIf="checkSize"><span *ngIf="discount(sendItem?.foodSend?.discount)">£{{price}}</span> £{{priceSale}}</p>
+            </div>
+            <div class="addcart">
+                <form class="cart row" [formGroup]="formAdd" action="submit" method="post" enctype="multipart/form-data">
+                    <div class="quantities buttons col-3">
+                        <button type="button" class="minus" (click)="Minus()" (change)="getFoodSend(sendItem)">-</button>
+                        <input type="number" min="1" class="qty" formControlName="quan" name="quantity" [(ngModel)]="quantity">
+                        <button type="button" class="plus" (click)="Plus()" (change)="getFoodSend(sendItem)">+</button>
+                    </div>
+                    <button class="col-4 add" type="submit" name="add-to-cart" (click)="addCart(sendItem)"> 
+                        <a class="change" *ngIf="changePage" routerLink="../../cart"></a>
+                        <i class="fas fa-shopping-basket"></i> Add to cart
+                    </button>
+
+                    <div class="col-3">
+                        <select class="" formControlName="size" (change)="getFoodSend(sendItem)" [(ngModel)]="size">
+                            <!-- <option value="" selected disabled hidden>Choose size</option> -->
+                            <option value="{{item.size.sizeName}}" *ngFor="let item of listFD">{{item.size.sizeName}}</option>
+                        </select>
+                    </div>
+                    <!-- <div class="col-2">
+                        <button type="button" [ngClass]="{'like':true, 'active': _like}" (click)="check_like()">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div> -->
+                </form>
+            </div>
+            <div class="product_meta">
+                <span class="posted_in">Category: <a class="category" href="" rel="tag">Burgers</a></span>
+            </div>
+            <div class="share row">
+                <p>Share:</p>
+                <a href="" class="link"><i class="fab fa-facebook-square"></i></a>
+                <a href="" class="link"><i class="fab fa-twitter"></i></a>
+                <a href="" class="link"><i class="fab fa-pinterest"></i></a>
+                <a href="" class="link"><i class="fab fa-google-plus"></i></a>
+                <a href="" class="link"><i class="far fa-envelope"></i></a>
+            </div>
+            <div class="product-info">
+                <div>
+                    <ul>
+                        <li>Free global shipping on all orders</li>
+                        <li>30 days easy returns if you change your mind</li>
+                        <li>Order before noon for same day dispatch</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="brand-wrap">
+                <h5 class="title-brand">Guaranteed Safe Checkout</h5>
+                <img src="https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/trust-symbols.png" data-src="https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/trust-symbols.png" class="image-responsive lazyloaded">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="description container">
+    <div class="title-des row">
+        <div class="col-6 des">
+            <button (click)="des()">Description</button>
+        </div>
+        <div class="col-6 review">
+            <button (click)="com()">Comment ({{sizeofcomment}})</button>
+        </div>
+    </div>
+    <div class="des-content" *ngIf="check">
+        <p>Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise
+            add the crowning touch. Oh baby!</p>
+        <p><span>Ingredients:</span> Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese</p>
+    </div>
+</div>
+<div class="size container" *ngIf="check">
+    <div class="row">
+        <div class="col-2 all-size">
+            <div class="name-size pos">
+                <p>Size</p>
+            </div>
+            <div class="price-size pos">
+                <p>Price</p>
+            </div>
+        </div>
+        <div class="col-2 content-size" *ngFor="let item of listFD">
+            <div class="onesize name-size pos">
+                <p>{{item.size.sizeName}}</p>
+            </div>
+            <div class="oneprice pos">
+                <p>£{{item.price}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="comment" *ngIf="!check">
+    <div class="row" style="margin: auto;">
+        <div class="col-6">
+            <div class="onecomment container" *ngFor="let item of listComment">
+                <div class="row">
+                    <div class="col-2 usersymbol">
+                        <div class="symbol">
+                            <img src="../../assets/images/usersymbol.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="rating">
+                            <span class="stars-container stars-{{item.rating*20}}">★★★★★</span>
+                        </div><br>
+                        <div class=" row">
+                            <div class="col-5 user">
+                                <p>{{item.user.userName}}</p>
+                            </div>
+                            <div class="col-1 clock">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="col-6 date">
+                                <p>{{item.created}}</p>
+                            </div>
+                        </div>
+                        <div class="content" style="color: gray;">
+                            <p>{{item.content}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form class="col-6 commentform" [formGroup]="formComment">
+            <!-- <p style="color: gray;">
+                Your email address will not be published. Required fields are marked
+                <span style="color: red;">*</span></p> -->
+            <div class="yourrating">
+                <p>Your rating <span style="color: red;">*</span></p>
+                <fieldset class="rate">
+                    <input (click)="send('5')" type="radio" [checked]="checked_5" id="star5" name="rating" value="5" />
+                    <label class="full" for="star5" title="Awesome - 5 stars"><i class="fas fa-star"></i></label>
+                    <input (click)="send('4')" type="radio" [checked]="checked_4" id="star4" name="rating" value="4" />
+                    <label class="full" for="star4" title="Pretty good - 4 stars"><i class="fas fa-star"></i></label>
+                    <input (click)="send('3')" type="radio" [checked]="checked_3" id="star3" name="rating" value="3" />
+                    <label class="full" for="star3" title="Meh - 3 stars"><i class="fas fa-star"></i></label>
+                    <input (click)="send('2')" type="radio" [checked]="checked_2" id="star2" name="rating" value="2" />
+                    <label class="full" for="star2" title="Kinda bad - 2 stars"><i class="fas fa-star"></i></label>
+                    <input (click)="send('1')" type="radio" [checked]="checked_1" id="star1" name="rating" value="1" />
+                    <label class="full" for="star1" title="Sucks big time - 1 star"><i class="fas fa-star"></i></label>
+                </fieldset>
+            </div><br>
+            <div class="commentcontent">
+                <p>Your comment <span style="color: red;">*</span></p>
+                <textarea name="comment" formControlName="content" id="" rows="7" placeholder="Comment" [(ngModel)]="comment"></textarea>
+            </div>
+            <!-- <div class="row">
+                <div class="col-6">
+                    <div class="name">
+                        <p>Name <span style="color: red;">*</span></p>
+                        <input type="text" placeholder="Name">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="email">
+                        <p>Email <span style="color: red;">*</span></p>
+                        <input type="email" placeholder="Email" id="">
+                    </div>
+                </div>
+            </div> -->
+            <div class="btn-submit">
+                <a routerLink="../../food/{{sendItem.foodSend.foodId}}" (click)="addComment(comment)"><button>Submit</button></a>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="relate">
+    <p>RELATED PRODUCTS</p>
+</div>
+<div class="food-relate">
+    <div class="row">
+        <div class="col-4 onefood" style="margin-bottom: 50px;" *ngFor="let item of listFoodRelated">
+            <div class="foodmain">
+                <div class="imgfood">
+                    <a routerLink="../{{item.food.foodId}}"><img src={{item.food.imageURL}} alt=""></a>
+                </div>
+                <div class="namefood">
+                    <a routerLink="../{{item.food.foodId}}">
+                        <p>{{item.food.foodName}}</p>
+                    </a>
+                </div>
+                <div class="description">
+                    <p>{{item.food.catalog.descriptions}}</p>
+                </div>
+                <div class="row cost-cart">
+                    <div class="col-2">
+                        <p>£{{item.price}}</p>
+                    </div>
+                    <div class="col-8">
+                        <p>Size: {{item.size.sizeName}}</p>
+                    </div>
+                    <div class="col-2">
+                        <a routerLink="../../cart" (click)="addToCart(item)"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

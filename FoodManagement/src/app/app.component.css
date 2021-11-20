@@ -1,0 +1,66 @@
+.firstcontact {
+    margin-left: -100px;
+}
+
+.phone-address li {
+    color: #eff4e2;
+    font-size: 14px;
+}
+
+.allapp {
+    width: 100%;
+    height: 45px;
+    background-color: #1e1d23;
+}
+
+.system a {
+    color: white;
+}
+
+.system a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+ul {
+    padding: 0px;
+    margin-top: 10px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.footer {
+    padding: 50px 0;
+    background-color: #181818;
+    color: white;
+    text-align: center;
+}
+
+.content-footer ul>a {
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-top: 7px;
+}
+
+.content-footer ul>a:hover {
+    background-color: #ffc222;
+    color: #0f172b;
+}

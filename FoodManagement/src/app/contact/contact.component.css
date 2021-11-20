@@ -1,0 +1,191 @@
+ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.menu-all li {
+    position: relative;
+}
+
+.menu-all li:hover>.sub-page {
+    visibility: visible;
+}
+
+.sub-page {
+    position: absolute;
+    padding: 5px 0px;
+    top: 100%;
+    left: 0px;
+    z-index: 1;
+    width: 160px;
+    background: white;
+    visibility: hidden;
+}
+
+.sub-page li {
+    font-size: 16px;
+}
+
+.sub-page li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.call {
+    margin-top: -8px;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffc222;
+    margin-top: -15px;
+}
+
+.menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    font-weight: 800;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 340px;
+}
+
+.titlemenu {
+    position: absolute;
+    text-align: center;
+    margin-top: -230px;
+    margin-left: 205px;
+}
+
+.titlemenu h1 {
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.tohome {
+    font-size: 20px;
+}
+
+.linkhome {
+    text-align: end;
+}
+
+.linkhome a {
+    color: burlywood;
+    margin: 0 10px;
+}
+
+.linkhome a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.menu-menu {
+    text-align: start;
+    padding: 0;
+}
+
+.contact {
+    margin: 100px 120px;
+}
+
+.contact-title p {
+    font-size: 35px;
+    font-weight: 750;
+}
+
+.contact-intro {
+    color: #84848f;
+    margin-top: -15px;
+    margin-bottom: 55px;
+}
+
+.name {
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.contact-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.send {
+    padding: 0 80px;
+    border: 1px solid #e5e5e5;
+    margin: inherit;
+}
+
+.send-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.formtosend input {
+    width: 100%;
+    height: 43px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    padding: 0 10px;
+}
+
+.formtosend textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    padding: 5px 10px;
+}
+
+button {
+    border-radius: 6px;
+    height: 50px;
+    width: 150px;
+    background-color: #ffc222;
+    color: #0f172b;
+    font-weight: 700;
+    transition: 200ms;
+    border: none;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    color: white;
+}
+
+button:focus {
+    outline: none;
+}

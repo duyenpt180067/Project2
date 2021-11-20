@@ -1,0 +1,323 @@
+ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.menu-all li {
+    position: relative;
+}
+
+.menu-all li:hover>.sub-page {
+    visibility: visible;
+}
+
+.sub-page {
+    position: absolute;
+    padding: 5px 0px;
+    top: 100%;
+    left: 0px;
+    z-index: 1;
+    width: 160px;
+    background: white;
+    visibility: hidden;
+}
+
+.sub-page li {
+    font-size: 16px;
+}
+
+.sub-page li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.call {
+    margin-top: -8px;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffc222;
+    margin-top: -15px;
+}
+
+.menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    font-weight: 800;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 340px;
+}
+
+.titlemenu {
+    position: absolute;
+    text-align: center;
+    margin-top: -230px;
+    margin-left: 190px;
+}
+
+.titlemenu h1 {
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.linkhome {
+    text-align: end;
+}
+
+.linkhome a {
+    color: burlywood;
+}
+
+.linkhome a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.menu-menu {
+    text-align: start;
+    padding: 0;
+}
+
+.onedeal {
+    border-radius: 20px;
+    padding: 4px;
+    margin: 50px 0 15px 0;
+}
+
+.imgdeal {
+    background-color: #fbf7e8;
+    border-radius: 20px;
+    border: #efefef 1px solid;
+}
+
+.imgdeal img {
+    width: 100%;
+}
+
+.namedeal {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 15px;
+}
+
+.costdeal {
+    font-weight: 650;
+    color: #ffc222;
+    padding-top: 15px;
+}
+
+.qty {
+    padding: .5em;
+    border-radius: 0;
+    text-align: center;
+    font-size: 16px;
+    width: 35px;
+    color: #1E1D23;
+    border: none;
+    -moz-appearance: textfield;
+    font-weight: 700;
+}
+
+.qty::-webkit-outer-spin-button,
+.qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.buttons button {
+    color: #000;
+    background-color: #f7f4ef;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 6px;
+    padding: 0;
+    text-align: center;
+    z-index: 9;
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.buttons button:focus {
+    outline: none;
+}
+
+.remove {
+    margin: 55px 0;
+}
+
+.address {
+    margin: 50px 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.address input {
+    width: 340px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #fbf7e8;
+    border: none;
+    color: gray;
+    font-size: 18px;
+}
+
+.address input:focus {
+    outline: white;
+}
+
+.order {
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: -4px;
+    font-weight: 700;
+    border-radius: 8px 8px 8px 8px;
+    padding: 14px 0;
+    background-color: #ffc222;
+    border: none;
+    width: 100px;
+    margin-bottom: 40px;
+}
+
+.order:hover {
+    color: #fff;
+}
+
+.order:focus {
+    color: #fff;
+    background-color: #eeac00;
+    outline: none;
+}
+
+.subtotal input {
+    border: white;
+}
+
+.subtotal input:focus {
+    outline: none;
+}
+
+.onsale {
+    color: #fff;
+    padding: 0 6px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    background: #1e1d23;
+    z-index: 3;
+    border-radius: 26px;
+}
+
+p span {
+    text-decoration-line: line-through;
+    color: gray;
+}
+
+.total {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.total span {
+    color: #ffc222;
+    text-decoration-line: none;
+}
+
+.relate {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 750;
+    margin-top: 30px;
+}
+
+.food-relate {
+    margin: 70px 110px;
+}
+
+.foodmain {
+    border: 1px solid #f3f3f3;
+    padding: 20px 25px 0 25px;
+    border-radius: 20px;
+}
+
+.imgfood {
+    text-align: center;
+    margin: -8px -42px;
+}
+
+.imgfood img {
+    width: 80%;
+    border-radius: 15px;
+    text-align: left;
+    transition: 300ms;
+    background-color: #fbf7e8;
+}
+
+.imgfood:hover img {
+    transform: scale(1.1);
+    background-color: #ffc222;
+}
+
+.imgfood:hover img {
+    transform: scale(1.1);
+}
+
+.namefood p {
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 16px;
+}
+
+.description p {
+    color: gray;
+}
+
+.cost-cart p {
+    font-size: 18px;
+    color: #ffc222;
+    font-weight: 800;
+}
+
+#del {
+    display: none;
+}

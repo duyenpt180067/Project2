@@ -1,0 +1,313 @@
+<div class="head">
+    <div class="container">
+        <div class="row">
+            <div class="menu-cart col-7">
+                <div class="row">
+                    <div class="col-2 logo">
+                        <a routerLink="../home"><img src="../../assets/images/logo.PNG" alt=""></a>
+                    </div>
+                    <div class="col-10 menu-all">
+                        <nav>
+                            <ul class="menu">
+                                <li><a routerLink="../home" style="color: #ffc222;">Home</a></li>
+                                <!-- <li><a routerLink="../menu">Menu</a></li> -->
+                                <li><a routerLink="../about">About</a></li>
+                                <li><a routerLink="../shop">Shop</a></li>
+                                <li><a routerLink="../blog">Blog</a></li>
+                                <li><a routerLink="../faq">Faqs</a></li>
+                                <!-- <li><a style="cursor: pointer;">Page</a>
+                                    <ul class="sub-page">
+                                        <li><a routerLink="../faq" title="">faqs</a></li>
+                                        <li><a routerLink="../team" title="">our team</a></li>
+                                    </ul>
+                                </li> -->
+                                <li><a routerLink="../contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="ship-call col-5">
+                <div class="row">
+                    <div class="img-ship col-2">
+                        <img src="../../assets/images/ship.PNG" alt="">
+                    </div>
+                    <div class="call col-6">
+                        <p>Call and Order in</p>
+                        <p class="phone-number"> +1 718-904-4450</p>
+                    </div>
+                    <div class="contact-login col-4">
+                        <ul>
+                            <li><a routerLink="../user"><i class="fas fa-user"></i></a></li>
+                            <li><a routerLink="../cart"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li><a routerLink="../orderall" title="your orders"><i class="fas fa-address-book"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="banner">
+    <div class="img-banner">
+        <img src="../../assets/images/banner.jpg" alt="">
+    </div>
+    <div class="img-pizza span3 wow animate__animated animate__bounceIn">
+        <img src="../../assets/images/h1_pizza.png" alt="">
+    </div>
+    <div data-wow-delay="0.2s" class="img-tomato span3 wow animate__animated animate__bounceInLeft">
+        <img src="../../assets/images/h1_tomato.png" alt="">
+    </div>
+    <div data-wow-delay="0.7s" class="gia-vi-1 span3 wow wow animate__animated animate__bounceInLeft">
+        <img src="../../assets/images/h1_shape-6.png">
+    </div>
+    <div data-wow-delay="0.8s" class="gia-vi-2 span3 wow animate__animated animate__bounceIn">
+        <img src="../../assets/images/h1_shape-7.png" alt="">
+    </div>
+    <div data-wow-delay="0.3s" class="gia-vi-3 wow animate__animated animate__backInLeft">
+        <img src="../../assets/images/h2_shape-5.png" alt="">
+    </div>
+    <div class="order">
+        <h1 class="wow animate__animated animate__fadeInUp" style="font-weight: 700">UNLIMITED <br>MEDIUM PIZZAS</h1>
+        <h3 class="wow animate__animated animate__fadeInUp" style="color: #00a149">Medium 2-topping* pizza</h3>
+        <p class="wow animate__animated animate__fadeInUp">*Additional charge for premium toppings. Minimum of 2 required.</p>
+        <a class="wow animate__animated animate__fadeInUp" routerLink="../menu"><button type="">ORDER NOW</button></a>
+    </div>
+</div>
+<div class="btn-menu">
+    <button type="" style="margin-top: 60px;">MENU</button>
+</div>
+<div class="home-menu container">
+    <div class="row">
+        <div class="col content-menu" *ngFor="let item of listCategory">
+            <a routerLink="../shop/{{item?.caId}}">
+                <div class="img-menu">
+                    <img src={{item?.imageUrl}} alt="">
+                </div>
+                <p>{{item?.caName}}</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="introduction">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 find">
+                <div class="day-offer row">
+                    <div class="col-6 content-day-offer">
+                        <h3 style="font-weight:900">Any day offers</h3>
+                        <p style="font-size: 13px">NEW PHENOMENON BURGER TASTE</p>
+                        <h4>$12.90</h4>
+                    </div>
+                    <div class="col-6 img-burger">
+                        <img style="width: 90%; margin-top: 28px;margin-left: -30px;position: absolute;z-index: 2;" src="../../assets/images/burger.png" alt="">
+                        <i class="fas fa-circle" style="font-size: 150px; position: absolute; color: rgb(255,194,34);margin-left: -20px;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 find">
+                <div class="other-flavors row">
+                    <div class="col-6 content-other-flavors">
+                        <h3 style="font-weight:900">Other flavors</h3>
+                        <p style="font-size: 13px">SAVE ROOM.<br> WE MADE SALATS</p>
+                        <h4>$12.90</h4>
+                    </div>
+                    <div class="col-6 img-burger">
+                        <img style="width: 100%; margin-top: 28px;margin-left: -30px;position: absolute;z-index: 2;" src="../../assets/images/sauces.png" alt="">
+                        <i class="fas fa-circle" style="font-size: 150px; position: absolute; color: #f6f6f6;margin-left: -20px;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 find">
+                <div class="find-poco row">
+                    <div class="col-7 content-find-poco">
+                        <h3 style="font-weight:900">Find a Poco store near you</h3>
+                        <a routerLink="../contact" title="" style="font-weight:700;color: #ffc222;">CONTACT US</a>
+                    </div>
+                    <div class="col-5 img-burger">
+                        <img style="width: 100%;margin-top: 28px;margin-left: -30px;position: absolute;z-index: 2;" src="../../assets/images/address-icon.png" alt="">
+                        <i class="fas fa-circle" style="font-size: 150px; position: absolute; color: #e4e4e4;margin-left: -45px;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popular-dish container">
+    <h1 style="	font-weight: 800;font-size: 50px;">Popular dishes</h1>
+    <div class="row menu-dishes">
+        <ul>
+            <li><button id="1" (click)="Category(1)">Burgers</button></li>
+            <li *ngFor="let item of listCatalog"><button (click)="Category(item)" id="{{item.caId}}">{{item.caName}}</button></li>
+        </ul>
+    </div>
+</div>
+
+<div class="food row">
+    <div class="col-3 onefood" *ngFor="let food of listFood">
+        <div class="foodmain">
+            <span class="onsale" *ngIf="discount(food)">Sale!</span>
+            <div class="imgfood">
+                <a routerLink="../food/{{food.food.foodId}}" title=""><img src={{food.food.imageURL}} alt=""></a>
+            </div>
+            <div class="namefood">
+                <a routerLink="../food/{{food.food.foodId}}" title="">
+                    <p>{{food.food.foodName}}</p>
+                </a>
+            </div>
+            <div class="description">
+                <p>{{food.food.catalog.descriptions}}</p>
+            </div>
+            <div class="row cost-cart">
+                <div class="col-5">
+                    <p>£{{food.size.sizeName}}</p>
+                </div>
+                <div class="col-5" style="text-align: start; padding: 0;">
+                    <p><span *ngIf="discount(food)">£{{food.price}}</span> £{{food.price *(100 - food.food.discount)/100}}</p>
+                </div>
+                <div class="col-2">
+                    <a routerLink="../cart" (click)="addCart(food)"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="btn-menu" style="margin-top:50px">
+    <a (click)="changeToPage1()"><button type="">All Food</button></a>
+</div>
+<div class="top-recipes container">
+    <div class="row">
+        <div class="col-4 top-recipes-menu">
+            <h1 style="	font-weight: 800;font-size: 30px;">Top recipes</h1>
+            <div class="title-top">
+                <div class="menu-1 row" *ngFor="let item of listRecipes">
+                    <div class="col-4 img-menu-1">
+                        <img src={{item.food.imageURL}} alt="">
+                    </div>
+                    <div class="col-6 content-menu-1">
+                        <a routerLink="../food/{{item.food.foodId}}">
+                            <p>{{item.food.foodName}}</p>
+                        </a>
+                        <a routerLink="../shop/{{item.food.catalog.caId}}">{{item.food.catalog.caName}}</a>
+                        <p><span>£{{item.price}}</span> £{{item.price *(100 - item.food.discount)/100}}</p>
+                    </div>
+                    <div class="col-2 cart">
+                        <a routerLink="../cart"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="menu-1 row">
+                    <div class="col-4 img-menu-1">
+                        <img src="../../assets/images/muffin-chocolate.png" alt="">
+                    </div>
+                    <div class="col-6 content-menu-1">
+                        <a href="" title="">
+                            <p>Muffin Chocolate</p>
+                        </a>
+                        <a href="" title="">Drinks</a>
+                        <p>£17.14</p>
+                    </div>
+                    <div class="col-2 cart">
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="menu-1 row">
+                    <div class="col-4 img-menu-1">
+                        <img src="../../assets/images/muffin-chocolate.png" alt="">
+                    </div>
+                    <div class="col-6 content-menu-1">
+                        <a href="" title="">
+                            <p>Muffin Chocolate</p>
+                        </a>
+                        <a href="" title="">Drinks</a>
+                        <p>£11.11</p>
+                    </div>
+                    <div class="col-2 cart">
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-4 top-recipes-menu">
+            <div class="row" style="margin-bottom: 20px">
+                <div class="col-11 see-all">
+                    <a (click)="changeToPage1()">See all</a>
+                </div>
+                <a (click)="changeToPage1()">
+                    <div class="col-1 next">
+                        <i class="fas fa-angle-right" style="margin-left: -3px;"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="title-top">
+                <div class="menu-1 row" *ngFor="let item of listRecipes2">
+                    <div class="col-4 img-menu-1">
+                        <img src={{item.food.imageURL}} alt="">
+                    </div>
+                    <div class="col-6 content-menu-1">
+                        <a routerLink="../food/{{item.food.foodId}}">
+                            <p>{{item.food.foodName}}</p>
+                        </a>
+                        <a routerLink="../shop/{{item.food.catalog.caId}}">{{item.food.catalog.caName}}</a>
+                        <p>£{{item.price *(100 - item.food.discount)/100}}</p>
+                    </div>
+                    <div class="col-2 cart">
+                        <a routerLink="../cart}"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="menu-1 row">
+                    <div class="col-4 img-menu-1">
+                        <img src="../../assets/images/chicken-hawaii.png" alt="">
+                    </div>
+                    <div class="col-6 content-menu-1">
+                        <a href="" title="">
+                            <p>Chicken Hawaii</p>
+                        </a>
+                        <a href="" title="">Pizza</a>
+                        <p>£14.49</p>
+                    </div>
+                    <div class="col-2 cart">
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="menu-1 row">
+                    <div class="col-4 img-menu-1">
+                        <img src="../../assets/images/muffin-chocolate.png" alt="">
+                    </div>
+                    <div class="col-6 content-menu-1">
+                        <a href="" title="">
+                            <p>Muffin Chocolate</p>
+                        </a>
+                        <a href="" title="">Drinks</a>
+                        <p>£15.53</p>
+                    </div>
+                    <div class="col-2 cart">
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="menu-1 row">
+                    <div class="col-4 img-menu-1">
+                        <img src="../../assets/images/muffin-chocolate.png" alt="">
+                    </div>
+                    <div class="col-6 content-menu-1">
+                        <a href="" title="">
+                            <p>Muffin Chocolate</p>
+                        </a>
+                        <a href="" title="">Drinks</a>
+                        <p><span>£16.07</span> £9.00</p>
+                    </div>
+                    <div class="col-2 cart">
+                        <a href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-4">
+            <img src="../../assets/images/slidehome.jpg" style="width: 100%; height: 500px; border: gray 1px solid; border-radius: 10px" alt="">
+        </div>
+    </div>
+</div>

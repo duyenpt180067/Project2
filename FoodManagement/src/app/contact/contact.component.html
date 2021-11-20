@@ -1,0 +1,123 @@
+<div class="head">
+    <div class="container">
+        <div class="row">
+            <div class="menu-cart col-7">
+                <div class="row">
+                    <div class="col-2 logo">
+                        <a routerLink="../home" title=""><img src="../../assets/images/logo.PNG" alt=""></a>
+                    </div>
+                    <div class="col-10 menu-all">
+                        <nav>
+                            <ul class="menu">
+                                <li><a routerLink="../home">Home</a></li>
+                                <!-- <li><a routerLink="../menu">Menu</a></li> -->
+                                <li><a routerLink="../about">About</a></li>
+                                <li><a routerLink="../shop">Shop</a></li>
+                                <li><a routerLink="../blog">Blog</a></li>
+                                <li><a routerLink="../faq">Faqs</a></li>
+                                <!-- <li><a style="cursor: pointer;">Page</a>
+                                    <ul class="sub-page">
+                                        <li><a routerLink="../faq" title="">faqs</a></li>
+                                        <li><a routerLink="../team" title="">our team</a></li>
+                                    </ul>
+                                </li> -->
+                                <li><a routerLink="../contact" style="color: #ffc222;">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="ship-call col-5">
+                <div class="row">
+                    <div class="img-ship col-2">
+                        <img src="../../assets/images/ship.PNG" alt="">
+                    </div>
+                    <div class="call col-6">
+                        <p>Call and Order in</p>
+                        <p class="phone-number"> +1 718-904-4450</p>
+                    </div>
+                    <div class="contact-login col-4">
+                        <ul>
+                            <li><a routerLink="../user"><i class="fas fa-user"></i></a></li>
+                            <li><a routerLink="../cart"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li><a routerLink="../orderall" title="your orders"><i class="fas fa-address-book"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-menu">
+        <div class="img-banner" style="opacity: 0.2;filter:brightness(80%);">
+            <img src="../../assets/images/bannermenu1.jpg" alt="">
+        </div>
+        <div class="titlemenu container">
+            <h1>Contact Us</h1>
+            <div class="tohome container">
+                <div class="row">
+                    <div class="linkhome col-6">
+                        <a routerLink="../home" title="">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-menu col-6">
+                        <p>Contact us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="contact">
+    <div class="contact-title">
+        <p>Call us or visit place</p>
+    </div>
+    <div class="contact-intro">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="contact-main row">
+        <div class="col-4 addr">
+            <img src="../../assets/images/phone.PNG" alt="">
+            <p class="name">Phone: </p>
+            <p style="color: gray;">+ 44 123 456 78 90</p>
+            <p style="color: gray; margin-top: -15px">+ 844 123 444 77 88</p>
+        </div>
+        <div class="col-4 addr">
+            <img src="../../assets/images/address.PNG" alt="">
+            <p class="name">Address: </p>
+            <p style="color: gray;">Box 565, Pinney's Beach, Charlestown,</p>
+            <p style="color: gray; margin-top: -15px">Nevis, West Indies, Caribbean</p>
+        </div>
+        <div class="col-4 addr">
+            <img src="../../assets/images/email.PNG" alt="">
+            <p class="name">Email: </p>
+            <p style="color: gray;">contact@example.com</p>
+            <p style="color: gray; margin-top: -15px">info@example.com</p>
+        </div>
+    </div>
+</div>
+<div class="contact">
+    <div class="row">
+        <div class="col-6 contact-img">
+            <img src="../../assets/images/contact.jpg" alt="">
+        </div>
+        <div class="col-6 send">
+            <div class="send-title">
+                <p>Send us a message</p>
+            </div>
+            <p style="color: gray; margin-top: -15px">The answer will be sent to your email.</p>
+            <form class="formtosend" [formGroup]="formContact" action="contact_submit" method="get" accept-charset="utf-8"><br>
+                <input type="text" name="name" formControlName="name" placeholder="Your name">
+                <p style="color: red;" *ngIf="formContact.get('name').invalid&&formContact.get('name').touched ">Your name is not included</p>
+                <br>
+                <input type="email" name="email" formControlName="email" placeholder="Email">
+                <p style="color: red;" *ngIf="formContact.get('email').invalid&&formContact.get('email').touched ">Your email is not satisfied</p>
+                <br>
+                <input type="text" name="subject" formControlName="subject" placeholder="Subject"><br>
+                <textarea name="qContent" placeholder="Question" formControlName="qContent" rows="5"></textarea>
+                <p style="color: red;" *ngIf="formContact.get('qContent').invalid&&formContact.get('qContent').touched ">Your question is not satisfied</p>
+                <br>
+                <button type="submit" (click)="send()">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>

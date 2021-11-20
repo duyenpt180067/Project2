@@ -1,0 +1,148 @@
+ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.menu-all li {
+    position: relative;
+}
+
+.menu-all li:hover>.sub-page {
+    visibility: visible;
+}
+
+.sub-page {
+    position: absolute;
+    padding: 5px 0px;
+    top: 100%;
+    left: 0px;
+    z-index: 1;
+    width: 160px;
+    background: white;
+    visibility: hidden;
+}
+
+.sub-page li {
+    font-size: 16px;
+}
+
+.sub-page li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.call {
+    margin-top: -8px;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffc222;
+    margin-top: -15px;
+}
+
+.menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    font-weight: 800;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 340px;
+}
+
+.titlemenu {
+    position: absolute;
+    text-align: center;
+    margin-top: -230px;
+    margin-left: 190px;
+}
+
+.titlemenu h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin-left: -50px;
+}
+
+.linkhome {
+    text-align: end;
+}
+
+.linkhome a {
+    color: burlywood;
+}
+
+.linkhome a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.menu-menu {
+    text-align: start;
+    padding: 0;
+}
+
+.chefs-main {
+    margin: 50px 100px;
+    text-align: center;
+}
+
+.chefs-main img {
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+.chefs-one:hover img {
+    filter: brightness(0.5);
+}
+
+.position {
+    position: absolute;
+    top: 68%;
+    left: 41%;
+}
+
+.chefs-one h4 {
+    font-weight: 700;
+    padding-top: 50px;
+}
+
+.chefs-one p {
+    color: #a3a3a3;
+}
+
+.position p {
+    background-color: #ffc222;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: black;
+}

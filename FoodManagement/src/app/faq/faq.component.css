@@ -1,0 +1,172 @@
+ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.menu-all li {
+    position: relative;
+}
+
+.menu-all li:hover>.sub-page {
+    visibility: visible;
+}
+
+.sub-page {
+    position: absolute;
+    padding: 5px 0px;
+    top: 100%;
+    left: 0px;
+    z-index: 1;
+    width: 160px;
+    background: white;
+    visibility: hidden;
+}
+
+.sub-page li {
+    font-size: 16px;
+}
+
+.sub-page li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.call {
+    margin-top: -8px;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffc222;
+    margin-top: -15px;
+}
+
+.menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    font-weight: 800;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 340px;
+}
+
+.titlemenu {
+    position: absolute;
+    text-align: center;
+    margin-top: -230px;
+    margin-left: 190px;
+}
+
+.titlemenu h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin-left: -50px;
+}
+
+.linkhome {
+    text-align: end;
+}
+
+.linkhome a {
+    color: burlywood;
+}
+
+.linkhome a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.menu-menu {
+    text-align: start;
+    padding: 0;
+}
+
+.question a:hover {
+    color: black;
+}
+
+.ques {
+    background-color: #fbf7e8;
+    border-radius: 10px;
+    width: 100%;
+    height: 55px;
+    border: none;
+    margin-left: initial;
+}
+
+.ques p {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.faqs {
+    margin-top: 90px;
+    margin-bottom: 150px;
+}
+
+button:focus {
+    outline: none;
+    background-color: #ffc222;
+    transition: 300ms;
+}
+
+.question {
+    border: 1px solid #efefef;
+    padding: 0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 300ms;
+}
+
+.faq {
+    text-align: start;
+}
+
+.ans {
+    text-align: end;
+}
+
+.answer {
+    padding: 40px 50px 5px 30px;
+    color: gray;
+    transition: 300ms;
+}
+
+
+/* .question>.answer {
+    display: none;
+}
+
+.question.active>.answer {
+    display: block!important;
+} */

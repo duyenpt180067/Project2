@@ -1,0 +1,317 @@
+ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.menu-all li {
+    position: relative;
+}
+
+.menu-all li:hover>.sub-page {
+    visibility: visible;
+}
+
+.sub-page {
+    position: absolute;
+    padding: 5px 0px;
+    top: 100%;
+    left: 0px;
+    z-index: 1;
+    width: 160px;
+    background: white;
+    visibility: hidden;
+}
+
+.sub-page li {
+    font-size: 16px;
+}
+
+.sub-page li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.call {
+    margin-top: -8px;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffc222;
+    margin-top: -15px;
+}
+
+.menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    font-weight: 800;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 340px;
+}
+
+.titlemenu {
+    position: absolute;
+    text-align: center;
+    margin-top: -230px;
+    margin-left: 190px;
+}
+
+.titlemenu h1 {
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.linkhome {
+    text-align: end;
+}
+
+.linkhome a {
+    color: burlywood;
+}
+
+.linkhome a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.menu-menu {
+    text-align: start;
+    padding: 0;
+}
+
+.popular-dish {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.menu-dishes {
+    margin: 50px 0;
+    justify-content: center;
+}
+
+.menu-dishes button {
+    background: white;
+    border: gray 1px solid;
+    border-radius: 30px;
+    font-weight: 800;
+}
+
+.menu-dishes button:hover {
+    color: #0f172b;
+    border: #ffc222 1px solid;
+}
+
+.menu-dishes button:focus {
+    background-color: #ffc222;
+    border: white;
+    outline: none;
+}
+
+button {
+    border-radius: 6px;
+    height: 50px;
+    width: 150px;
+    background-color: #ffc222;
+    color: #0f172b;
+    font-weight: 700;
+    transition: 200ms;
+    border: none;
+}
+
+button:hover {
+    color: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+.cost-hut {
+    position: absolute;
+    margin-top: -590px;
+    padding: 0 150px;
+}
+
+.cost-pepperoni {
+    position: absolute;
+    margin-top: -490px;
+    padding: 0 150px;
+}
+
+.cost-chicken {
+    position: absolute;
+    margin-top: -390px;
+    padding: 0 150px;
+}
+
+.cost-summer {
+    position: absolute;
+    margin-top: -290px;
+    padding: 0 150px;
+}
+
+.fastfood {
+    border-bottom: 1px dashed gray;
+    margin: 0;
+    height: 40px;
+}
+
+.foodname {
+    font-size: 25px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.foodcost {
+    color: #ffc222;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: end;
+    padding: 0;
+}
+
+.order {
+    width: 100%;
+    margin: 0;
+}
+
+.img-order {
+    padding: 0;
+}
+
+.img-burger img {
+    width: 100%;
+}
+
+.explore {
+    position: absolute;
+    margin-top: -450px;
+    text-align: center;
+    color: white;
+}
+
+.explore h1 {
+    font-size: 50px;
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.explore p {
+    font-size: 21px;
+    padding-bottom: 10px;
+}
+
+.btn-menu {
+    text-align: center;
+}
+
+.more {
+    margin: 100px 120px;
+}
+
+.element {
+    border: dashed #efefef;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-left: 20px;
+}
+
+.element:hover {
+    border: dashed #ffc222;
+}
+
+.element img {
+    transition: 300ms;
+}
+
+.element img:hover {
+    transform: scale(1.1);
+}
+
+.mainmenu {
+    margin: 45px 135px;
+}
+
+.menuone {
+    border: 1px solid #f3f3f3;
+    padding: 0 15px;
+    border-radius: 20px;
+}
+
+.onemenu {
+    background-color: #fff9e9;
+    margin: 15px 0;
+    border-radius: 20px;
+}
+
+.oneimg img {
+    width: 100%;
+}
+
+.namefood p {
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 16px;
+}
+
+.description p {
+    font-size: 18px;
+    color: gray;
+    font-weight: 480;
+}
+
+.cost-cart p {
+    font-size: 18px;
+    color: #ffc222;
+    font-weight: 800;
+}
+
+.onsale {
+    color: #fff;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #1e1d23;
+    z-index: 3;
+    border-radius: 20px;
+}
+
+p span {
+    text-decoration-line: line-through;
+    color: gray;
+}

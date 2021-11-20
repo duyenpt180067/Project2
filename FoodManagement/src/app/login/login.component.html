@@ -1,0 +1,21 @@
+<div class="app">
+    <h1>Welcome to Poco</h1>
+    <h6>Xin vui lòng đăng nhập</h6>
+    <form class="sign-in" role="form" [formGroup]="formLogin" (ngSubmit)="submitLogin()">
+        <div>
+            <input type="text" id="userName" name="userName" placeholder="Nhập tên tài khoản" formControlName="userName">
+            <p *ngIf="formLogin.get('userName').invalid&&formLogin.get('userName').touched ">Tên tài khoản không được bỏ trống</p>
+        </div>
+
+        <div>
+            <input type="password" name="pass" placeholder="Nhập mật khẩu" formControlName="pass">
+            <p *ngIf="formLogin.get('pass').invalid&&formLogin.get('pass').touched">Mật khẩu chứa ít nhất 6 ký tự</p>
+        </div>
+
+        <div class="check">
+            <input type="checkbox" name="remember" id="remember">Ghi nhớ tài khoản
+        </div><br>
+        <button type="submit" [disabled]="formLogin.invalid">Đăng nhập</button>
+    </form>
+    <div class="regis"><i>Không có tài khoản?___</i><a routerLink="user/register"> Đăng ký</a></div>
+</div>

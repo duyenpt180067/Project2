@@ -1,0 +1,397 @@
+.firstcontact {
+    margin-left: -100px;
+}
+
+.phone-address li {
+    color: #eff4e2;
+    font-size: 14px;
+}
+
+.allapp {
+    width: 100%;
+    height: 45px;
+    background-color: #1e1d23;
+}
+
+.system a {
+    color: white;
+}
+
+.system a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.menu {
+    margin-top: 10px;
+}
+
+ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.menu-all li {
+    position: relative;
+}
+
+.menu-all li:hover>.sub-page {
+    visibility: visible;
+}
+
+.sub-page {
+    position: absolute;
+    padding: 5px 0px;
+    top: 100%;
+    left: 0px;
+    z-index: 1;
+    width: 160px;
+    background: white;
+    visibility: hidden;
+}
+
+.sub-page li {
+    font-size: 16px;
+}
+
+.sub-page li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+.logo img {
+    width: 125px;
+}
+
+.menu {
+    margin-left: -50px;
+}
+
+.menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.call {
+    margin-top: -8px;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffc222;
+    margin-top: -15px;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 900px;
+    position: absolute;
+}
+
+.img-pizza {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.img-pizza img {
+    position: absolute;
+}
+
+.img-tomato {
+    margin-top: -100px;
+    margin-left: 300px;
+}
+
+.img-tomato img {
+    position: absolute;
+}
+
+.gia-vi-1 {
+    padding-top: 200px;
+    padding-left: 450px;
+}
+
+.gia-vi-1 img {
+    position: absolute;
+}
+
+.gia-vi-2 img {
+    position: absolute;
+}
+
+.gia-vi-2 {
+    margin-top: -200px;
+    margin-left: -50px;
+}
+
+.gia-vi-3 img {
+    position: absolute;
+}
+
+.gia-vi-3 {
+    padding-top: 500px;
+    padding-left: 1300px;
+}
+
+.order {
+    position: absolute;
+    color: white;
+    margin: 30px 100px;
+    color: #ffc222;
+}
+
+button {
+    border-radius: 6px;
+    height: 50px;
+    width: 150px;
+    background-color: #ffc222;
+    color: #0f172b;
+    font-weight: 700;
+    transition: 200ms;
+    border: none;
+}
+
+button:hover {
+    color: wheat;
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn-menu {
+    text-align: center;
+    margin-top: 370px;
+}
+
+.home-menu {
+    margin-top: 50px;
+}
+
+.content-menu {
+    text-align: center;
+    font-weight: 650;
+}
+
+.content-menu img {
+    height: 90px;
+    transition: 300ms;
+}
+
+.content-menu :hover img {
+    transform: scale(1.1);
+}
+
+.introduction {
+    margin-top: 50px;
+    background-color: wheat;
+    padding: 80px 0;
+}
+
+.find i {
+    transition: 700ms;
+}
+
+.find:hover i {
+    transform: scale(1.1);
+}
+
+.day-offer {
+    border-radius: 7px;
+    background-color: white;
+    padding: 25px 0px 25px 20px;
+    margin: inherit;
+}
+
+.other-flavors {
+    border-radius: 7px;
+    background-color: #01a149;
+    padding: 25px 0px 25px 20px;
+    margin: inherit;
+    color: white;
+}
+
+.find-poco {
+    border-radius: 7px;
+    background-color: white;
+    padding: 25px 0px 25px 20px;
+    margin: inherit;
+    height: 217px;
+}
+
+.popular-dish {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.menu-dishes {
+    margin: 50px 0;
+    justify-content: center;
+}
+
+.menu-dishes button {
+    background: white;
+    border: gray 1px solid;
+    border-radius: 30px;
+    font-weight: 800;
+}
+
+.menu-dishes button:hover {
+    color: #0f172b;
+    border: #ffc222 1px solid;
+}
+
+.menu-dishes button:focus {
+    background-color: #ffc222;
+    border: white;
+    outline: none;
+}
+
+.top-recipes {
+    margin-top: 50px;
+}
+
+.title-top {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px 2px;
+}
+
+.img-menu-1 img {
+    width: 100%;
+}
+
+.menu-1 {
+    margin-bottom: 20px;
+    background-color: #fff9e9;
+    padding: 20px 0;
+}
+
+.content-menu-1 a p {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: -2px;
+    color: #0f172b;
+}
+
+.content-menu-1 a p:hover {
+    color: #ffc222;
+}
+
+.onsale {
+    color: #fff;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #1e1d23;
+    z-index: 3;
+    border-radius: 20px;
+}
+
+p span {
+    text-decoration-line: line-through;
+    color: gray;
+}
+
+.content-menu-1 p {
+    font-weight: 800;
+    color: #ffc222;
+}
+
+.cart {
+    margin-top: 50px;
+}
+
+.see-all {
+    text-align: end;
+    cursor: pointer;
+}
+
+.see-all:hover {
+    color: #ffc222;
+}
+
+.next {
+    cursor: pointer;
+}
+
+.next {
+    background-color: #01a149;
+    border-radius: 6px;
+    width: 15px;
+}
+
+.food {
+    margin: 0 110px;
+}
+
+.onefood {
+    padding: 5px 8px;
+}
+
+.foodmain {
+    border: 1px solid #f3f3f3;
+    border-radius: 20px;
+    padding: 0 13px;
+}
+
+.imgfood {
+    text-align: center;
+}
+
+.imgfood img {
+    width: 80%;
+    border-radius: 15px;
+    text-align: left;
+    transition: 300ms;
+}
+
+.imgfood:hover img {
+    transform: scale(1.1);
+}
+
+.namefood p {
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 16px;
+}
+
+.description p {
+    font-size: 15px;
+    color: gray;
+    font-weight: 480;
+}
+
+.cost-cart p {
+    font-size: 18px;
+    color: #ffc222;
+    font-weight: 800;
+}

@@ -1,0 +1,296 @@
+ul {
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul>li {
+    margin-right: 15px;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.menu-all li {
+    position: relative;
+}
+
+.menu-all li:hover>.sub-page {
+    visibility: visible;
+}
+
+.sub-page {
+    position: absolute;
+    padding: 5px 0px;
+    top: 100%;
+    left: 0px;
+    z-index: 1;
+    width: 160px;
+    background: white;
+    visibility: hidden;
+}
+
+.sub-page li {
+    font-size: 16px;
+}
+
+.sub-page li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #0f172b;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.call {
+    margin-top: -8px;
+}
+
+.phone-number {
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffc222;
+    margin-top: -15px;
+}
+
+.menu li {
+    font-size: 15px;
+    margin-right: 18px;
+    font-weight: 800;
+}
+
+.img-banner img {
+    width: 100%;
+    height: 340px;
+}
+
+.titlemenu {
+    position: absolute;
+    text-align: center;
+    margin-top: -230px;
+    margin-left: 190px;
+}
+
+.titlemenu h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin-left: -50px;
+}
+
+.linkhome {
+    text-align: end;
+}
+
+.linkhome a {
+    color: burlywood;
+}
+
+.linkhome a:hover {
+    text-decoration: none;
+    color: #ffc222;
+}
+
+.menu-menu {
+    text-align: start;
+    padding: 0;
+}
+
+button {
+    border-radius: 6px;
+    height: 50px;
+    width: 150px;
+    background-color: #ffc222;
+    color: #0f172b;
+    font-weight: 700;
+    transition: 200ms;
+    border: none;
+}
+
+button:hover {
+    color: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+.blog-init {
+    margin: 0 110px;
+    margin-bottom: 100px;
+}
+
+.blog-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.blog-ele {
+    border: 3px solid #efefef;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    margin-top: 55px;
+}
+
+.blog-ele p {
+    color: gray;
+}
+
+.createdby {
+    padding: 0 40px;
+}
+
+.blog-title {
+    padding: 0 40px;
+}
+
+.des-blog {
+    padding: 0 40px;
+}
+
+.readmore {
+    padding: 0 40px;
+}
+
+.img-post img {
+    width: 100%;
+    border-radius: 10px;
+    height: 80px;
+}
+
+.title {
+    font-weight: 770;
+}
+
+.created {
+    margin-top: -13px;
+    font-size: 14px;
+    color: gray;
+}
+
+.tags-title {
+    font-weight: 800;
+    font-size: 25px;
+    margin-top: 50px;
+    border-bottom: dashed gray 1px;
+    margin-bottom: 30px;
+}
+
+.btn-tag {
+    margin: 10px;
+}
+
+.btn-tag button {
+    background: white;
+    border: #efefef 2px solid;
+    border-radius: 30px;
+    margin: -5px;
+}
+
+.btn-tag button:hover {
+    color: #0f172b;
+    border: #ffc222 1px solid;
+}
+
+.intro {
+    text-align: center;
+    margin-top: 100px;
+    background-color: #ffc222;
+    border-radius: 10px;
+    padding-top: 60px;
+}
+
+.intro-title {
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 670;
+}
+
+.intro-name {
+    color: #00a149;
+    font-size: 55px;
+    font-weight: 900;
+    margin-top: -30px;
+}
+
+.intro-call {
+    margin-top: -30px;
+    color: white;
+    font-weight: 700;
+}
+
+.intro-phone {
+    color: red;
+    font-size: 40px;
+    font-weight: 800;
+    margin: -12px 0;
+}
+
+.foodmain {
+    border: 1px solid #f3f3f3;
+    padding: 20px 25px 0 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+.imgfood {
+    text-align: center;
+    margin: -5px -42px;
+}
+
+.imgfood img {
+    width: 80%;
+    border-radius: 15px;
+    text-align: left;
+    transition: 300ms;
+    background-color: #fbf7e8;
+}
+
+.imgfood:hover img {
+    transform: scale(1.1);
+    background-color: #ffc222;
+}
+
+.namefood p {
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 16px;
+}
+
+.foods {
+    color: gray;
+}
+
+.category {
+    font-size: 22px;
+    font-weight: 750;
+}
+
+.catalog {
+    color: gray;
+    background-color: #fbf7e8;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 10px 18px;
+}
+
+.one-catalog {
+    margin-bottom: 20px;
+    padding-top: 10px;
+}

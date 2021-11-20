@@ -1,0 +1,23 @@
+<div class="app">
+    <h1>Đăng ký tài khoản</h1>
+    <form [formGroup]="formRegister" action="Register_submit" method="get" accept-charset="utf-8" class="form" role="form" (ngSubmit)="register()">
+
+        <div> <input type="text" name="userName" placeholder="Tên tài khoản" formControlName="userName">
+            <p *ngIf="formRegister.get('userName').invalid &&(formRegister.get('userName').touched)">Tài khoản chưa hợp lệ</p>
+        </div>
+        <div> <input type="tel" name="phone" placeholder="Số điện thoại" formControlName="phone" pattern="[0-9]{6,11}" title="Số điên thoại chỉ gồm các chữ số">
+            <p *ngIf="formRegister.get('phone').invalid&&formRegister.get('phone').touched">Số điện thoại chưa hợp lệ</p>
+        </div>
+        <!-- <p *ngIf="(formRegister.get('phone').value||formRegister.get('phone').value<0||formRegister.get('phone').value>999999999)&&(formRegister.get('phone').touched)">Số điện thoại bao gồm các chữ số</p> -->
+        <div> <input type="text" name="addresses" placeholder="Địa chỉ" formControlName="addresses">
+            <p *ngIf="formRegister.get('addresses').invalid &&(formRegister.get('addresses').touched)">Không được bỏ trống</p>
+        </div>
+        <div> <input type="password" name="pass" placeholder="Nhập mật khẩu" formControlName="pass">
+            <p *ngIf="formRegister.get('pass').invalid&&formRegister.get('pass').touched" style="padding-left:5px ;">Mật khẩu chứa ít nhất 6 ký tự</p>
+        </div>
+        <div> <input name="retypepassword" placeholder="Nhập lại mật khẩu" type="password" formControlName="rePass">
+            <p *ngIf="(formRegister.get('rePass').value!=formRegister.get('pass').value)&&formRegister.get('rePass').touched">Mật khẩu không đúng</p>
+        </div>
+        <button type="submit" [disabled]="formRegister.invalid">Đăng ký</button>
+    </form>
+</div>

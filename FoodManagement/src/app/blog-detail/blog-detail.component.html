@@ -1,0 +1,170 @@
+<div class="head">
+    <div class="container">
+        <div class="row">
+            <div class="menu-cart col-7">
+                <div class="row">
+                    <div class="col-2 logo">
+                        <a routerLink="../../home"><img src="../../assets/images/logo.PNG" alt=""></a>
+                    </div>
+                    <div class="col-10 menu-all">
+                        <nav>
+                            <ul class="menu">
+                                <li><a routerLink="../../home">Home</a></li>
+                                <!-- <li><a routerLink="../menu">Menu</a></li> -->
+                                <li><a routerLink="../../about">About</a></li>
+                                <li><a routerLink="../../shop">Shop</a></li>
+                                <li><a routerLink="../../blog" style="color: #ffc222;">Blog</a></li>
+                                <li><a routerLink="../../faq">Faqs</a></li>
+                                <!-- <li><a style="cursor: pointer;">Page</a>
+                                    <ul class="sub-page">
+                                        <li><a routerLink="../faq" title="">faqs</a></li>
+                                        <li><a routerLink="../team" title="">our team</a></li>
+                                    </ul>
+                                </li> -->
+                                <li><a routerLink="../contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="ship-call col-5">
+                <div class="row">
+                    <div class="img-ship col-2">
+                        <img src="../../assets/images/ship.PNG" alt="">
+                    </div>
+                    <div class="call col-6">
+                        <p>Call and Order in</p>
+                        <p class="phone-number"> +1 718-904-4450</p>
+                    </div>
+                    <div class="contact-login col-4">
+                        <ul>
+                            <li><a routerLink="../../user"><i class="fas fa-user"></i></a></li>
+                            <li><a routerLink="../../cart"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li><a routerLink="../../orderall" title="your orders"><i class="fas fa-address-book"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-menu">
+        <div class="img-banner" style="opacity: 0.2;filter:brightness(80%);">
+            <img src="../../assets/images/bannermenu1.jpg" alt="">
+        </div>
+        <div class="titlemenu container">
+            <h1>Our Blog</h1>
+            <div class="tohome container">
+                <div class="row">
+                    <div class="linkhome col-6">
+                        <a routerLink="../../home" title="">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="menu-menu col-6">
+                        <p>Our blog</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="blog-init row">
+    <div class="col-8">
+        <div class="blog-content">
+            <div class="blog-ele">
+                <div class="blog-img">
+                    <img src={{item?.imageurl}} alt="">
+                </div>
+                <div class="createdby">
+                    <p>{{item?.created}} / Post by <b>{{item?.user?.userName}}</b></p>
+                </div>
+                <div class="blog-title">
+                    <h3>{{item?.blogName}}</h3>
+                </div>
+                <div class="des-blog">
+                    <p>{{item?.title}}</p>
+                    <p>{{item?.descriptions}}</p><br>
+                    <div class="row">
+                        <div class="col-1">
+                            <img src="../../assets/images/note.PNG" alt="">
+                        </div>
+                        <div class="col-11 note" style="font-size: 19px;">
+                            <p><b>{{item?.note}}</b></p>
+                        </div>
+                    </div><br>
+                    <p>{{item?.conclude}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="next-prev row">
+            <div class="col-6">
+                <div *ngIf="check1">
+                    <p style="margin-bottom: 0;">PREV POST</p>
+                    <a routerLink="../{{prevBlog?.blogId}}" style="font-size: 20px;font-weight: 700;">{{prevBlog?.blogName}}</a>
+                </div>
+            </div>
+            <div class="col-6" style=" padding-left: 0;text-align: end;" *ngIf="check2">
+                <p style="margin-bottom: 0;">NEXR POST</p>
+                <a routerLink="../{{nextBlog?.blogId}}" style="font-size: 20px;font-weight: 700;">{{nextBlog?.blogName}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 tags">
+        <div class="recentpost container">
+            <p class="tags-title">Recent Posts</p>
+            <div class="post row" *ngFor="let blog of listRecentBlog">
+                <div class="col-4 img-post">
+                    <a routerLink="../{{blog?.blogId}}"><img src={{blog?.imageurl}} alt=""></a>
+                </div>
+                <div class="post-content col-8">
+                    <div class="title">
+                        <a routerLink="../{{blog?.blogId}}">
+                            <p>{{blog?.blogName}}</p>
+                        </a>
+                    </div>
+                    <div class="created">
+                        <p>{{blog?.created}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foodmain">
+            <div class="category">
+                <p>Categories</p>
+            </div>
+            <div class="catalog container">
+                <a routerLink="../../shop/{{item.category.caId}}" *ngFor="let item of listCatalog">
+                    <div (click)="Category(item.category.caId)" class="one-catalog row" id="{{item.category.caId}}">
+                        <div class="col-10 foods">
+                            <div class="row">
+                                <div class="col-3" style="padding-right: 0;">
+                                    <img src={{item.category.imageUrl}} style="width: 100%;" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <p>{{item.category.caName}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <p>({{item.size}})</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="intro-title">
+                <p>Super Delicious</p>
+            </div>
+            <div class="intro-name">
+                <p>Chicken</p>
+            </div>
+            <div class="intro-call">
+                <p>call us now:</p>
+            </div>
+            <div class="intro-phone">
+                <p>1-800-555-333</p>
+            </div>
+            <img src="../../assets/images/widgets_blog2.png" alt="">
+        </div>
+    </div>
+</div>
